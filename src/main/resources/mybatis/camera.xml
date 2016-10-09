@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!-- Oracle 기반 -->
+<mapper namespace = "camera">
+
+  <!-- 검색을하지 않는 전체 목록 -->
+  <select id="list" resultType="CameraVO">
+   SELECT ctno, sale_c, title, hprice, region, trading, name 
+   FROM camera
+   ORDER BY ctno DESC         
+  </select>
+   
+  <!-- 등록 --> 
+  <insert id="create" parameterType="CameraVO">
+   insert into CAMERA(ctno,category, name,passwd,sale_c,product_c,trading, region, hprice ,p_day,quantity ,email ,phone ,title ,content) 
+   values ((SELECT NVL(MAX(ctno), 0)+1 as ctno FROM CAMERA),
+   #{category}, #{name}, #{passwd}, #{sale_c}, #{product_c},#{trading}, #{region}, #{hprice}, #{p_day}, #{quantity}, #{email}, #{phone}, #{title}, #{content})
+  </insert> 
+  
+  <!-- 조회 -->
+  <select id="read" resultType="CameraVO" parameterType="int">
+    select ctno,category, name,passwd,sale_c,product_c,region, trading, hprice ,p_day,quantity ,email ,phone ,title ,content 
+    from camera
+    where ctno = #{ctno}
+  </select>       
+</mapper>
