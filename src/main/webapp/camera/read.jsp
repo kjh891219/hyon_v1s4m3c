@@ -7,7 +7,8 @@
 <head> 
 <meta charset="UTF-8"> 
 <title></title> 
- 
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> 
 <link href="../css/style.css" rel="Stylesheet" type="text/css">
 <script type="text/JavaScript"
           src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

@@ -6,9 +6,10 @@
 <html lang="ko"> 
 <head> 
 <meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title></title> 
- 
-<link href="../css/style.css" rel="Stylesheet" type="text/css">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> 
 <script type="text/JavaScript"
           src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript" src="../js/jquery.cookie.js"></script>
@@ -16,14 +17,16 @@
 <script type="text/javascript">
  
 </script>
+
 </head> 
 <!-- ----------------------------------------- -->
 <body leftmargin="0" topmargin="0">
 <%-- <jsp:include page="/menu/top.jsp" flush='false' /> --%>
 <!-- ----------------------------------------- -->
 
- 
-<TABLE class='table' style='width: 70%;'>
+<div class="container" style="margin: auto;">
+ <div class="table-responsive">
+<TABLE class='table'>
   <colgroup>
     <col style='width: 10%;'/>
     <col style='width: 15%;'/>
@@ -33,7 +36,7 @@
     <col style='width: 10%;'/>
     <col style='width: 10%;'/>
   </colgroup>
-  <TR>
+  <TR class="active">
     <TH class='th'>글번호</TH>
     <TH class='th'>거래구분</TH>
     <TH class='th'>제목</TH>
@@ -58,10 +61,15 @@
  
 </TABLE>
 
-<DIV class='bottom'>
-  <button type='button' onclick="location.href='./create.do'">등록</button>
-  <button type='button' onclick="location.reload();">새로 고침</button>
-</DIV>
+</div>
+<div style="text-align: center;">
+<button type='button' onclick="location.href='./create.do'" class="btn btn-success btn-lg">등록</button>
+<button type='button' onclick="location.reload();" class="btn btn-danger btn-lg">새로 고침</button>
+</div>
+</div>
+
+
+  
 <!-- -------------------------------------------- -->
 <%-- <jsp:include page="/menu/bottom.jsp" flush='false' /> --%>
 </body>

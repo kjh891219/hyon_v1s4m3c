@@ -6,6 +6,9 @@
 <meta charset="UTF-8"> 
 <title></title> 
 
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    
 <link href="../css/style.css" rel="Stylesheet" type="text/css">
 <script type="text/JavaScript"
           src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -20,50 +23,68 @@
 <%-- <jsp:include page="/menu/top.jsp" flush='false' /> --%>
 <!-- ----------------------------------------- -->
 
-<DIV class='title'>글등록</DIV>
 
-<DIV class='content'>
-<FORM name='frm' method='POST' action='./create.do'>
+
+<DIV class='center-block'>
+<DIV class='title'>글등록</DIV>
+<FORM name='frm' method='POST' action='./create.do' class='form-inline'>
   <fieldset>
     <ul>
-      <li>
-        <label class='label' for='category'>분류</label>
-        <select name='category' id="category">
+    <div class="row">
+      <div class="col-xs-5">
+        <label class='select' for='category'>*분류</label>
+        <select name='category' id="category" class="form-control-lg-10-lg-10-lg-10-lg-10">
            <option value="DSLR" selected="selected">DSLR</option>
            <option value="일반디카">일반디카</option>
            <option value="필름카메라">필름카메라</option>
            <option value="렌즈">렌즈</option>
         </select>
-      </li>
+      </div>
+      <div class="col-xs-5">
+      <label for='phone' >*전화번호</label>
+        <input type='text' name='phone' id='phone'  required="required" value='010-1111-2222' class="form-control-lg-10-lg-10-lg-10"> 
+      </div>
+      </div>
       <hr/>
-      <li>
-        <label class='label' for='name'>*이름</label>
-        <input type='text' name='name' id='name' value='닉네임' required="required">
-        <label class='label' for='passwd'>*패스워드</label>
-        <input type='password' name='passwd' id='passwd' value='1234' required="required">
-      </li>
+      <div class="row">
+      <div class="col-xs-5"> 
+        <label for='name'>*이름</label>
+        <input type='text' name='name' id='name' value='닉네임' required="required" class='form-control-lg-10-lg-10-lg-10-lg-10'/>
+      </div>
+     <div class="col-xs-5">    
+        <label for='passwd'>*패스워드</label>
+        <input type='password' name='passwd' id='passwd' value='1234' required="required" class='form-control-lg-10-lg-10-lg-10'/>
+      </div>
+      </div>
       <hr/>
-     <li>
-        <label class='label' for='sale_c'>*거래구분</label>
-        <select name='sale_c' id="sale_c">
+     <div class="row">
+        <div class="col-xs-5">  
+        <label for='sale_c'>*거래구분</label>
+        <select name='sale_c' id="sale_c" class="form-control-lg-10-lg-10-lg-10">
            <option value="팝니다" selected="selected">팝니다</option>
            <option value="삽니다">삽니다</option>
         </select>
-         <label class='label' for='product_c'>*상품구분</label>
-        <select name='product_c' id='product_c'>
+        </div>
+        <div class="col-xs-5">
+         <label for='product_c'>*상품구분</label>
+        <select name='product_c' id='product_c' class="form-control-lg-10-lg-10-lg-10">
            <option value="중고품" selected="selected">중고품</option>
            <option value="신상품">신상품</option>
         </select>
-      </li>
+        </div>
+      </div>
       <hr/>
-      <li>
-         <label class='label' for='trading'>*거래방식</label>
-         <select name='trading' id='trading'>
+      <div class="row">
+       <div class="col-xs-5"> 
+         <label for='trading'>*거래방식</label>
+         <select name='trading' id='trading' class="form-control-lg-10-lg-10-lg-10">
            <option value="직거래" selected="selected">직거래</option>
            <option value="</">택배</option>
-        </select >  
-        <label class='label' for='region'>*지역</label>
-         <select name='region' id='region'>
+        </select >
+        </div>
+        <div class="col-xs-5">  
+        <label for='region'>*지역</label>
+         <select name='region' id='region' class="form-control-lg-10-lg-10-lg-10">
            <option value="서울" selected="selected">서울</option>
            <option value="인천">인천</option>
            <option value="대구">대구</option>
@@ -81,40 +102,45 @@
            <option value="충북">충북</option>
            <option value="제주">제주</option>
         </select>  
-      </li>
+      </div>
+      </div>
       <hr/>
-      <li>
-        <label class='label' for='hprice'>*희망가격</label>
-        <input type='text' name='hprice' id='hprice'  required="required" value='100000'>원      
-        <label class='label' for='p_day' >구입시기</label>
-        <input type='text' name='p_day' id='p_day' value='2016년10월'> 예)2016년 10월 
-      </li>
+      <div class="row">
+        <div class="col-xs-5"> 
+        <label for='hprice'>*희망가격</label>
+        <input type='text' name='hprice' id='hprice'  required="required" value='100000' class="form-control-lg-10-lg-10-lg-10">원
+        </div>
+        <div class="col-xs-5">       
+        <label for='p_day' >구입시기</label>
+        <input type='text' name='p_day' id='p_day' value='2016년10월' class="form-control-lg-10-lg-10-lg-10"> 
+        </div>
+     </div>
       <hr/>
-      <li>
-        <label class='label' for='quantity'>수량</label>
-        <input type='text' name='quantity' id='quantity' value='1'>
-      </li>
+      <div class="row">
+      <div class="col-xs-5"> 
+        <label for='quantity'>수량</label>
+        <input type='text' name='quantity' id='quantity' value='1' class="form-control-lg-10-lg-10-lg-10">
+      </div>
+       <div class="col-xs-5">  
+        <label for='email'>*이메일</label>
+        <input type='text' name='email' id='email'  required="required" value='kkk@naver.com' class="form-control-lg-10-lg-10-lg-10">
+        </div>
+       </div>
       <hr/>
-       <li>
-        <label class='label' for='email'>*이메일</label>
-        <input type='text' name='email' id='email'  required="required" value='kkk@naver.com'>      
-        <label class='label' for='phone' >*전화번호</label>
-        <input type='text' name='phone' id='phone'  required="required" value='010-1111-2222'> 
-      </li>
+      <div class="form-group">
+        <label for='title'>*제목</label>
+        <input type='text' name='title' id='title' required="required" value='디카팔아요' class="form-control-lg-10-lg-10-lg-10">
+      </div>
       <hr/>
-      <li>
-        <label class='label' for='title'>*제목</label>
-        <input type='text' name='title' id='title' required="required" value='디카팔아요'>
-      </li>
+      <div class="form-group">
+        <label for='content'>상세설명</label>
+        <textarea rows="10" cols="100"  name="content" id="content" placeholder="내용을 입력하세요" class="form-group">sqld책 싸게 팔아요</textarea>
+      </div>
       <hr/>
-      <li>
-        <label class='label' for='content'>상세설명</label>
-        <textarea rows="10" cols="40" name="content" id="content" placeholder="내용을 입력하세요">sqld책 싸게 팔아요</textarea>
-      </li>
-      <hr/>
+      <div>
       <li class='right'>
-        <button type="submit">등록</button>
-        <button type="button" onclick="location.href='./list.jsp'">취소</button>
+        <button type="submit" class="btn btn-success btn-lg">등록</button>
+        <button type="button" onclick="location.href='./list.jsp'" class="btn btn-danger btn-lg">취소</button>
       </li>         
     </ul>
   </fieldset>
