@@ -1,22 +1,65 @@
 package dev.mvc.camera;
 
+
 public class CameraVO {
+
+  /*
+   * CREATE TABLE CAMERA(
+      ctno                              NUMBER(6)    NOT NULL    PRIMARY KEY,
+      category                          VARCHAR2(20)     NOT NULL,
+      nickname                          VARCHAR2(20)     NOT NULL,
+      passwd                            VARCHAR2(10)     NOT NULL,
+      deal_way                          VARCHAR2(20)     NOT NULL,
+      deal_code                         VARCHAR2(20)     NOT NULL,
+      product_code                      VARCHAR2(20)     NOT NULL,
+      hprice                            NUMBER(15)     DEFAULT 0     NOT NULL,
+      region                            VARCHAR2(20)     DEFAULT ''    NOT NULL,
+      tel                               VARCHAR2(14)     DEFAULT ''    NOT NULL,
+      email                             VARCHAR2(100)    DEFAULT ''    NOT NULL,
+      quantity                          NUMBER(6)    DEFAULT 0     NOT NULL,
+      title                             VARCHAR2(200)    DEFAULT ''    NOT NULL,
+      content                           VARCHAR2(4000)     NOT NULL,
+      purc_date                         VARCHAR2(20)     DEFAULT ''    NOT NULL,
+      wdate                             DATE     DEFAULT sysdate     NOT NULL,
+      cnt                               NUMBER(6)    DEFAULT 0     NOT NULL
+  );
+  */
   
+  /**글번호*/
   private int ctno;
+  /**카테고리*/
   private String category;
-  private String name;
+  /**닉네임*/
+  private String nickname;
+  /**비밀번호*/
   private String passwd;
-  private String sale_c;
-  private String product_c;
+  /**거래방법*/
+  private String deal_way;
+  /**거래구분*/
+  private String deal_code;
+  /**상품구분*/
+  private String product_code;
+  /**희망가격*/
+  private int hprice;
+  /**지역*/
   private String region;
-  private String trading;
-  private String hprice;
-  private String p_day;
-  private String quantity;
+  /**전화번호*/
+  private String tel;
+  /**이메일*/
   private String email;
-  private String phone;
+  /**수량*/
+  private int quantity;
+  /**제목*/
   private String title;
+  /**상세내용*/
   private String content;
+  /**구입시기*/
+  private String purc_date;
+  /**글등록일*/
+  private String wdate;
+  /**조회수*/
+  private int cnt;
+  
   
   public int getCtno() {
     return ctno;
@@ -30,11 +73,11 @@ public class CameraVO {
   public void setCategory(String category) {
     this.category = category;
   }
-  public String getName() {
-    return name;
+  public String getNickname() {
+    return nickname;
   }
-  public void setName(String name) {
-    this.name = name;
+  public void setNickname(String nickname) {
+    this.nickname = nickname;
   }
   public String getPasswd() {
     return passwd;
@@ -42,17 +85,29 @@ public class CameraVO {
   public void setPasswd(String passwd) {
     this.passwd = passwd;
   }
-  public String getSale_c() {
-    return sale_c;
+  public String getDeal_way() {
+    return deal_way;
   }
-  public void setSale_c(String sale_c) {
-    this.sale_c = sale_c;
+  public void setDeal_way(String deal_way) {
+    this.deal_way = deal_way;
   }
-  public String getProduct_c() {
-    return product_c;
+  public String getDeal_code() {
+    return deal_code;
   }
-  public void setProduct_c(String product_c) {
-    this.product_c = product_c;
+  public void setDeal_code(String deal_code) {
+    this.deal_code = deal_code;
+  }
+  public String getProduct_code() {
+    return product_code;
+  }
+  public void setProduct_code(String product_code) {
+    this.product_code = product_code;
+  }
+  public int getHprice() {
+    return hprice;
+  }
+  public void setHprice(int hprice) {
+    this.hprice = hprice;
   }
   public String getRegion() {
     return region;
@@ -60,29 +115,11 @@ public class CameraVO {
   public void setRegion(String region) {
     this.region = region;
   }
-  public String getTrading() {
-    return trading;
+  public String getTel() {
+    return tel;
   }
-  public void setTrading(String trading) {
-    this.trading = trading;
-  }
-  public String getHprice() {
-    return hprice;
-  }
-  public void setHprice(String hprice) {
-    this.hprice = hprice;
-  }
-  public String getP_day() {
-    return p_day;
-  }
-  public void setP_day(String p_day) {
-    this.p_day = p_day;
-  }
-  public String getQuantity() {
-    return quantity;
-  }
-  public void setQuantity(String quantity) {
-    this.quantity = quantity;
+  public void setTel(String tel) {
+    this.tel = tel;
   }
   public String getEmail() {
     return email;
@@ -90,11 +127,11 @@ public class CameraVO {
   public void setEmail(String email) {
     this.email = email;
   }
-  public String getPhone() {
-    return phone;
+  public int getQuantity() {
+    return quantity;
   }
-  public void setPhone(String phone) {
-    this.phone = phone;
+  public void setQuantity(int quantity) {
+    this.quantity = quantity;
   }
   public String getTitle() {
     return title;
@@ -108,5 +145,24 @@ public class CameraVO {
   public void setContent(String content) {
     this.content = content;
   }
+  public String getPurc_date() {
+    return purc_date;
+  }
+  public void setPurc_date(String purc_date) {
+    this.purc_date = purc_date;
+  }
+  public String getWdate() {
+    return wdate;
+  }
+  public void setWdate(String wdate) {
+    this.wdate = wdate;
+  }
+  public int getCnt() {
+    return cnt;
+  }
+  public void setCnt(int cnt) {
+    this.cnt = cnt;
+  }
+ 
  
 }

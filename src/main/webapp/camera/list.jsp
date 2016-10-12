@@ -27,15 +27,7 @@
 <div class="container" style="margin: auto;">
  <div class="table-responsive">
 <TABLE class='table'>
-  <colgroup>
-    <col style='width: 10%;'/>
-    <col style='width: 15%;'/>
-    <col style='width: 30%;'/>
-    <col style='width: 15%;'/>
-    <col style='width: 10%;'/>
-    <col style='width: 10%;'/>
-    <col style='width: 10%;'/>
-  </colgroup>
+ 
   <TR class="active">
     <TH class='th'>글번호</TH>
     <TH class='th'>거래구분</TH>
@@ -50,12 +42,12 @@
 <c:forEach var="vo" items="${list }">
   <TR>
     <TD class='td'>${vo.ctno}</TD>
-    <TD class='td'>${vo.sale_c }</TD>
+    <TD class='td'>${vo.deal_code }</TD>
     <TD class='td'><A href="./read.do?ctno=${vo.ctno}">${vo.title}</A></TD>
     <TD class='td'>${vo.hprice}</TD>
+    <TD class='td'>${vo.deal_way}</TD>
     <TD class='td'>${vo.region}</TD>
-    <TD class='td'>${vo.trading}</TD>
-    <TD class='td'>${vo.name}</TD>
+    <TD class='td'>${vo.nickname}</TD>
   </TR>
 </c:forEach>
  

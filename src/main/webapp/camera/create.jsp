@@ -41,15 +41,15 @@
         </select>
       </div>
       <div class="col-xs-5">
-      <label for='phone' >*전화번호</label>
-        <input type='text' name='phone' id='phone'  required="required" value='010-1111-2222' class="form-control-lg-10-lg-10-lg-10"> 
+      <label for='tel' >*전화번호</label>
+        <input type='text' name='tel' id='tel'  required="required" value='010-1111-2222' class="form-control-lg-10-lg-10-lg-10"> 
       </div>
       </div>
       <hr/>
       <div class="row">
       <div class="col-xs-5"> 
-        <label for='name'>*이름</label>
-        <input type='text' name='name' id='name' value='닉네임' required="required" class='form-control-lg-10-lg-10-lg-10-lg-10'/>
+        <label for='nickname'>*별명</label>
+        <input type='text' name='nickname' id='nickname' value='닉네임' required="required" class='form-control-lg-10-lg-10-lg-10-lg-10'/>
       </div>
      <div class="col-xs-5">    
         <label for='passwd'>*패스워드</label>
@@ -59,15 +59,15 @@
       <hr/>
      <div class="row">
         <div class="col-xs-5">  
-        <label for='sale_c'>*거래구분</label>
-        <select name='sale_c' id="sale_c" class="form-control-lg-10-lg-10-lg-10">
+        <label for='deal_code'>*거래구분</label>
+        <select name='deal_code' id="deal_code" class="form-control-lg-10-lg-10-lg-10">
            <option value="팝니다" selected="selected">팝니다</option>
            <option value="삽니다">삽니다</option>
         </select>
         </div>
         <div class="col-xs-5">
-         <label for='product_c'>*상품구분</label>
-        <select name='product_c' id='product_c' class="form-control-lg-10-lg-10-lg-10">
+         <label for='product_code'>*상품구분</label>
+        <select name='product_code' id='product_code' class="form-control-lg-10-lg-10-lg-10">
            <option value="중고품" selected="selected">중고품</option>
            <option value="신상품">신상품</option>
         </select>
@@ -76,8 +76,8 @@
       <hr/>
       <div class="row">
        <div class="col-xs-5"> 
-         <label for='trading'>*거래방식</label>
-         <select name='trading' id='trading' class="form-control-lg-10-lg-10-lg-10">
+         <label for='deal_way'>*거래방식</label>
+         <select name='deal_way' id='deal_way' class="form-control-lg-10-lg-10-lg-10">
            <option value="직거래" selected="selected">직거래</option>
            <option value="</">택배</option>
         </select >
@@ -111,8 +111,8 @@
         <input type='text' name='hprice' id='hprice'  required="required" value='100000' class="form-control-lg-10-lg-10-lg-10">원
         </div>
         <div class="col-xs-5">       
-        <label for='p_day' >구입시기</label>
-        <input type='text' name='p_day' id='p_day' value='2016년10월' class="form-control-lg-10-lg-10-lg-10"> 
+        <label for='purc_date' >구입시기</label>
+        <input type='text' name='purc_date' id='purc_date' value='2016년10월' class="form-control-lg-10-lg-10-lg-10"> 
         </div>
      </div>
       <hr/>

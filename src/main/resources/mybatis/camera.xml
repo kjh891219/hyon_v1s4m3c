@@ -9,21 +9,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
   <!-- 검색을하지 않는 전체 목록 -->
   <select id="list" resultType="CameraVO">
-   SELECT ctno, sale_c, title, hprice, region, trading, name 
+   SELECT ctno, deal_code, title, hprice, deal_way, region, nickname  
    FROM camera
    ORDER BY ctno DESC         
   </select>
    
   <!-- 등록 --> 
   <insert id="create" parameterType="CameraVO">
-   insert into CAMERA(ctno,category, name,passwd,sale_c,product_c,trading, region, hprice ,p_day,quantity ,email ,phone ,title ,content) 
+   insert into CAMERA(ctno ,category, nickname, passwd, deal_way, deal_code, product_code, hprice, region, tel, email, quantity, title, content, purc_date) 
    values ((SELECT NVL(MAX(ctno), 0)+1 as ctno FROM CAMERA),
-   #{category}, #{name}, #{passwd}, #{sale_c}, #{product_c},#{trading}, #{region}, #{hprice}, #{p_day}, #{quantity}, #{email}, #{phone}, #{title}, #{content})
+   #{category}, #{nickname}, #{passwd}, #{deal_way}, #{deal_code},#{product_code}, #{hprice},#{region},  #{tel}, #{email}, #{quantity}, #{title}, #{content}, #{purc_date})
   </insert> 
   
   <!-- 조회 -->
   <select id="read" resultType="CameraVO" parameterType="int">
-    select ctno,category, name,passwd,sale_c,product_c,region, trading, hprice ,p_day,quantity ,email ,phone ,title ,content 
+    select ctno ,category, nickname, passwd, deal_way, deal_code, product_code, hprice, region, tel, email, quantity, title, content, purc_date, wdate, cnt
     from camera
     where ctno = #{ctno}
   </select>       

@@ -31,14 +31,14 @@
 <table border="1">
   <tr>
   <td style="text-align: center;">거래구분</td>
-  <td style="text-align: center;">${cameraVO.sale_c}</td>
+  <td style="text-align: center;">${cameraVO.deal_code}</td>
   <tr>
   <td style="text-align: center;">분류</td>
   <td style="text-align: center;">${cameraVO.category}</td>
   </tr>
   <tr>
   <td style="text-align: center;">상품구분</td>
-  <td style="text-align: center;">${cameraVO.product_c}</td>
+  <td style="text-align: center;">${cameraVO.product_code}</td>
   </tr>
   <tr>
   <td style="text-align: center;">거래지역</td>
@@ -46,11 +46,11 @@
   </tr>
   <tr>
   <td style="text-align: center;">거래방식</td>
-  <td style="text-align: center;">${cameraVO.trading}</td>
+  <td style="text-align: center;">${cameraVO.deal_way}</td>
   </tr>
   <tr>
   <td style="text-align: center;">구입시기</td>
-  <td style="text-align: center;">${cameraVO.p_day}</td>
+  <td style="text-align: center;">${cameraVO.purc_date}</td>
   </tr>
   <tr>
   <td style="text-align: center;">수량</td>
@@ -67,7 +67,7 @@
  <table border="1">
   <tr>
   <td style="text-align: center;">판매자</td>
-  <td style="text-align: center;">${cameraVO.name}</td>
+  <td style="text-align: center;">${cameraVO.nickname}</td>
   <tr>
   <tr>
   <td style="text-align: center;">이메일</td>
@@ -75,7 +75,7 @@
   <tr>
   <tr>
   <td style="text-align: center;">전화번호</td>
-  <td style="text-align: center;">${cameraVO.phone}</td>
+  <td style="text-align: center;">${cameraVO.tel}</td>
   <tr>
  </table>
 </div>
